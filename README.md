@@ -5,7 +5,8 @@ It tracks a fixed turn order, handles reactions, reminders, and keeps the channe
 
 The bot is ideal for tabletop style games, roleplay systems, and async strategy games where turn order is intentional and may temporarily pause for reactions.
 
-Features
+
+**Features**
 
 • Fixed turn order defined at game start
 
@@ -25,7 +26,8 @@ Features
 
 • Slash command control and button driven play
 
-How Turn Flow Works
+
+**How Turn Flow Works**
 
 A game starts with a specific player order
 
@@ -33,18 +35,29 @@ The current player takes their turn
 
 They click Done when finished
 
-Optional reaction flow
+
+**Optional reaction flow**
+
 • The current normal turn player may click React
+
 • They select another player to react
+
 • The normal turn pauses
+
 • The reacting player takes their turn
+
 • When done, the game resumes to the original player
 
+
 At any time
+
 • Anyone may click Skip to move the game forward
+
 • Skip ends reactions or advances the normal turn
 
-Commands
+
+**Commands**
+
 Start a game
 /turn start game:<name> players:<mentions in order>
 
@@ -72,49 +85,51 @@ Lists all active games in the current channel.
 End a game
 /turn end game:<name>
 
-
 Ends the game and removes the control panel.
 
-Reminders
+
+**Reminders**
 
 • Default reminder time is 24 hours
+
 • Only the current actor is pinged
+
 • Reminders reset whenever the active player changes
+
 • No spam reminders are sent to the whole group
 
-Permissions Required
+
+**Permissions Required**
 
 The bot requires the following channel permissions:
 
 • Send Messages
+
 • Manage Messages
+
 • Read Message History
+
 • Use Slash Commands
+
 
 Manage Messages is required to keep only one active control message per game.
 
-Installation Notes
+**Installation Notes**
 
 • This bot is intended for Guild install, not User install
+
 • Slash commands may take a moment to sync on first install
+
 • During development, guild scoped command sync is recommended
 
-Data Persistence
-
+**Data Persistence
+**
 Game state is stored locally in turn_state.json.
 
 If the bot restarts:
+
 • Active games resume
+
 • Control buttons remain functional
+
 • Reminders continue correctly
-
-About Turn Order
-
-Turn order is always explicitly defined at the start of each game.
-
-There is:
-• No randomization
-• No reusable turn templates
-• No automatic reshuffling
-
-Each game instance controls its own order.
