@@ -8,13 +8,21 @@ The bot is ideal for tabletop style games, roleplay systems, and async strategy 
 Features
 
 • Fixed turn order defined at game start
+
 • One active control message per game
+
 • Done button to complete turns
+
 • React button to pause a turn and trigger a reaction
+
 • Skip button that anyone can use to advance the game
+
 • Automatic resume after reactions
+
 • 24 hour reminder pings for the current actor
+
 • Support for multiple games per channel
+
 • Slash command control and button driven play
 
 How Turn Flow Works
