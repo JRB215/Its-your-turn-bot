@@ -1,116 +1,111 @@
-# It’s Your Turn Bot
+Its Your Turn Bot
 
-A Discord bot for managing turn order in asynchronous games.
+Its Your Turn is a Discord bot designed for turn based and async games. It tracks a fixed turn order, handles reactions, reminders, and keeps the channel clean by maintaining a single live control message per game.
 
-Designed for games with a fixed player order, reactions, and long turn windows.
+The bot is ideal for tabletop style games, roleplay systems, and async strategy games where turn order is intentional and may temporarily pause for reactions.
 
-Turn orders are never randomized and are defined fresh for each game instance.
+Features
 
----
+• Fixed turn order defined at game start
+• One active control message per game
+• Done button to complete turns
+• React button to pause a turn and trigger a reaction
+• Skip button that anyone can use to advance the game
+• Automatic resume after reactions
+• 24 hour reminder pings for the current actor
+• Support for multiple games per channel
+• Slash command control and button driven play
 
-## What This Bot Does
+How Turn Flow Works
 
-• Tracks whose turn it is  
-• Lets the active player advance the turn  
-• Supports reaction turns that temporarily pause the normal turn  
-• Sends reminder pings if a player takes too long  
-• Keeps controls available via buttons and slash commands  
+A game starts with a specific player order
 
-Ideal for board games, tabletop RPGs, strategy games, or any async mobile games played over Discord.
+The current player takes their turn
 
----
+They click Done when finished
 
-## Starting a Game
+Optional reaction flow
+• The current normal turn player may click React
+• They select another player to react
+• The normal turn pauses
+• The reacting player takes their turn
+• When done, the game resumes to the original player
 
-Use the slash command:
+At any time
+• Anyone may click Skip to move the game forward
+• Skip ends reactions or advances the normal turn
 
-/turn start
+Commands
+Start a game
+/turn start game:<name> players:<mentions in order>
 
-Fields  
-• **game** A name for this game instance  
-• **players** Mention players in the exact order they will take turns  
 
-Example  
-/turn start
-game: root
-players: @Alice @Bob @Charlie
+This posts the control panel and pings all players once at game start.
 
-The bot will post a message showing the current turn as well as a set of buttons.
+Repost the control panel
+/turn panel game:<name>
 
----
 
-## Buttons
+Useful if the message was lost in chat.
 
-### Done
-• If it is your normal turn, ends your turn and advances to the next player  
-• If you are reacting, ends your reaction and returns control to the paused player  
+Check game status
+/turn status game:<name>
 
-Only the current active player can use this button.
 
----
+Shows the current turn state privately.
 
-### React
-• Only the current normal turn player can press this  
-• Allows that player to select another user to react  
-• The reacting player is pinged and becomes the active player  
-• When the reacting player clicks Done, control returns to the original player  
+List active games
+/turn list
 
-This supports games where actions trigger interrupts or responses.
 
----
-
-### End Game
-Ends the game and clears all state for that game instance.
-
----
-
-## Commands
-
-### `/turn status`
-Shows the current state of the game, including  
-• Turn order  
-• Current normal player  
-• Current reacting player, if any  
-
----
-
-### `/turn list`   (Not currently working)
 Lists all active games in the current channel.
 
----
+End a game
+/turn end game:<name>
 
-### `/turn panel`  (Not currently working)
-Reposts the current game state and buttons.
 
-Use this if  
-• You joined late  
-• The buttons scrolled out of view  
-• You are on mobile and cannot find the controls  
+Ends the game and removes the control panel.
 
----
+Reminders
 
-### `/turn end`
-Ends a game by name.
+• Default reminder time is 24 hours
+• Only the current actor is pinged
+• Reminders reset whenever the active player changes
+• No spam reminders are sent to the whole group
 
----
+Permissions Required
 
-## Reminders
+The bot requires the following channel permissions:
 
-If the current active player does not click Done within 24 hours, the bot sends a reminder ping.
+• Send Messages
+• Manage Messages
+• Read Message History
+• Use Slash Commands
 
-Reminders automatically switch when  
-• A reaction starts  
-• A reaction ends  
-• The turn advances  
+Manage Messages is required to keep only one active control message per game.
 
-Only the current active player is reminded.
+Installation Notes
 
----
+• This bot is intended for Guild install, not User install
+• Slash commands may take a moment to sync on first install
+• During development, guild scoped command sync is recommended
 
-## Troubleshooting
+Data Persistence
 
-If slash commands do not appear  
-• Re invite the bot with `applications.commands` enabled  
+Game state is stored locally in turn_state.json.
 
-If the game state seems unclear  
-• Use `/turn status` or `/turn panel` to view the current state  
+If the bot restarts:
+• Active games resume
+• Control buttons remain functional
+• Reminders continue correctly
+
+About Turn Order
+
+Turn order is always explicitly defined at the start of each game.
+
+There is:
+• No randomization
+• No reusable turn templates
+• No automatic reshuffling
+
+Each game instance controls its own order.
