@@ -1,6 +1,7 @@
 **Its Your Turn Bot**
 
-Its Your Turn is a Discord bot designed for turn based and async games. It tracks a fixed turn order, handles reactions, reminders, and keeps the channel clean by maintaining a single live control message per game.
+Its Your Turn is a Discord bot designed for turn based and async games. 
+It tracks a fixed turn order, handles reactions, reminders, and keeps the channel clean by maintaining a single live control message per game.
 
 The bot is ideal for tabletop style games, roleplay systems, and async strategy games where turn order is intentional and may temporarily pause for reactions.
 
