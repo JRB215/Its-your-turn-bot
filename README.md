@@ -59,30 +59,35 @@ At any time
 **Commands**
 
 Start a game
+
 /turn start game:<name> players:<mentions in order>
 
 
 This posts the control panel and pings all players once at game start.
 
 Repost the control panel
+
 /turn panel game:<name>
 
 
 Useful if the message was lost in chat.
 
 Check game status
+
 /turn status game:<name>
 
 
 Shows the current turn state privately.
 
 List active games
+
 /turn list
 
 
 Lists all active games in the current channel.
 
 End a game
+
 /turn end game:<name>
 
 Ends the game and removes the control panel.
