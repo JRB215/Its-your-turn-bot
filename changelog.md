@@ -2,6 +2,23 @@
 
 All notable changes to this project are documented here.
 
+**v1.3**
+
+	Turn flow safety and reminders
+	
+	Added Nudge button to manually remind the current actor
+	
+	Nudge only pings the active player
+	
+	Nudge does not alter turn order
+	
+	Nudge keeps the single-message-per-game behavior
+	
+	Confirmation required for Remove Player
+	
+	Confirmation required for End Game
+	
+	Reduced accidental destructive actions
 
 **v1.2**
 
