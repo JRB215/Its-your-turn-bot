@@ -1,49 +1,54 @@
-Changelog
+**Changelog**
 
 All notable changes to this project are documented here.
 
-v1.0
 
-Initial release
+**v1.2**
 
-Fixed, user-defined turn order
+	Quality of life and moderation controls
 
-Slash command based control
+	Skip button usable by anyone
 
-Done button to advance turns
+	Remove player button to permanently remove players mid-game
 
-Support for multiple games per channel
+	Automatic game end when too few players remain
 
-Persistent game state via local storage
+	Improved reminder handling after skips and removals
 
-v1.1
+	Cleaner message handling for reactions and resumes
 
-Turn flow improvements and stability
 
-Single active control message per game
 
-Automatic cleanup of old bot messages
+**v1.1**
 
-Reaction system to pause and resume turns
+	Turn flow improvements and stability
 
-Panel command to repost controls
+	Single active control message per game
 
-24 hour reminder system for current actor
+	Automatic cleanup of old bot messages
 
-Reminder reset on every turn change
+	Reaction system to pause and resume turns
 
-Improved restart recovery for active games
+	Panel command to repost controls
 
-v1.2
+	24 hour reminder system for current actor
 
-Quality of life and moderation controls
+	Reminder reset on every turn change
 
-Skip button usable by anyone
+	Improved restart recovery for active games
 
-Remove player button to permanently remove players mid-game
 
-Automatic game end when too few players remain
 
-Improved reminder handling after skips and removals
-
-Cleaner message handling for reactions and resumes
+**v1.0**
+	
+	Initial release
+	
+	Fixed, user-defined turn order
+	
+	Slash command based control
+	
+	Done button to advance turns
+	
+	Support for multiple games per channel
+	
+	Persistent game state via local storage
