@@ -1,20 +1,14 @@
-Privacy Policy
+# Privacy Policy
 
-It’s Your Turn! is a Discord bot designed to track turn order for games.
+It’s Your Turn! does not collect or transmit personal data outside of Discord.
 
-Data collected:
-The bot stores Discord user IDs and game related state such as turn order.
-This data is required for the bot to function.
+The bot stores the following information locally:
+- Discord user IDs for turn order
+- Channel IDs and game names
+- Game state required to manage turns
 
-Data usage:
-Data is used only to manage turn rotation and game state within Discord servers.
-No personal data is sold, shared, or used outside of bot functionality.
+All data is stored locally in a JSON file and is never shared with third parties.
 
-Data retention:
-Data is stored only while games are active and may persist between restarts.
-Data is removed when games end or are overwritten.
+Data exists only to support the functionality of the bot and is removed when games are ended.
 
-Contact:
-If you have concerns about data usage, contact the bot owner through Discord.
-
-By using this bot, you agree to this privacy policy.
+If you have questions, contact the bot owner via the GitHub repository.
