@@ -1,9 +1,11 @@
-It’s Your Turn! is a Discord bot designed to help users track turn order for games and group activities.
+# Terms of Service
 
-The bot only stores Discord user IDs and game state necessary to operate turn order features.
+By using It’s Your Turn!, you agree to the following:
 
-No personal data is sold, shared, or used outside of Discord.
+- The bot is provided as is, with no guarantees of uptime or correctness
+- The bot owner is not responsible for lost game progress
+- You are responsible for managing permissions and usage within your server
 
-By using this bot, you agree to use it responsibly and in compliance with Discord’s Terms of Service.
+The bot may be updated at any time to improve functionality or fix issues.
 
-The bot is provided as is with no warranty.
+Use of the bot constitutes acceptance of these terms.
