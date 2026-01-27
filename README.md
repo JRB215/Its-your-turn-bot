@@ -33,3 +33,54 @@ Start a new game.
 - `players` – Mention players in turn order
 
 Example:
+/turn start game:Combat players:@Alice @Bob @Charlie
+
+---
+
+### `/turn panel`
+Reposts the control panel for a game if it was lost in chat.
+
+---
+
+### `/turn status`
+Shows the current state of a game privately.
+
+---
+
+### `/turn list`
+Lists all active games in the current channel.
+
+---
+
+## Buttons
+
+- **Done** – Ends the current turn
+- **React** – Pause the turn and allow another player to react
+- **Skip** – Skips the current turn
+- **Nudge** – Sends a reminder to the current player
+- **Undo** – Reverts the last turn affecting action
+- **Remove** – Permanently removes a player from the game
+- **End** – Ends the game
+
+---
+
+## Persistence
+
+Game state is saved to `turn_state.json` and automatically restored when the bot restarts.
+
+---
+
+## Installation
+
+1. Clone this repository
+2. Create a Discord bot application
+3. Set your bot token as an environment variable:
+    DISCORD_TOKEN=your_token_here
+4. Run:
+    python bot.py
+---
+
+## License
+
+MIT
+
