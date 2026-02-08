@@ -12,6 +12,8 @@ Undo system and final feature set
 	- Undo history persisted across restarts
 	- History capped to prevent unbounded growth
 	- Finalized single message per game behavior
+	- Improved game panel updates by editing the existing message instead of posting new ones.
+	- Safer error handling when the bot lacks channel permissions.
 
 ---
 
