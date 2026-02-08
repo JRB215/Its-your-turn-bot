@@ -85,14 +85,3 @@ Lists all active games in the current channel.
 ## Persistence
 
 Game state is saved to `turn_state.json` and automatically restored when the bot restarts.
-
----
-
-## Installation
-
-1. Clone this repository
-2. Create a Discord bot application
-3. Set your bot token as an environment variable:
-    DISCORD_TOKEN=your_token_here
-4. Run:
-    python bot.py
