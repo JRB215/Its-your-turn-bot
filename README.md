@@ -84,4 +84,4 @@ Lists all active games in the current channel.
 
 ## Persistence
 
-Game state is saved to `turn_state.json` and automatically restored when the bot restarts.
+Game state is saved to `turn_state.json` stored on server and automatically restored when the bot restarts.
