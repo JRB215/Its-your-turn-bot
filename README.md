@@ -96,9 +96,3 @@ Game state is saved to `turn_state.json` and automatically restored when the bot
     DISCORD_TOKEN=your_token_here
 4. Run:
     python bot.py
----
-
-## License
-
-MIT
-
