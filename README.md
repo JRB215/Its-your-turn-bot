@@ -23,6 +23,24 @@ This bot is ideal for tabletop games, async play by post games, and any situatio
 
 ---
 
+## Required Channel Permissions
+
+For the bot to function correctly in a channel, it must be able to update the game panel message.
+
+Ensure the bot (or its role) has the following permissions **in the channel where games are run**:
+
+- View Channel
+- Send Messages
+- Read Message History
+
+Optional:
+- Manage Messages  
+  Only required if you enable features that delete old panel messages instead of editing them.
+
+If these permissions are missing, interactions such as **React**, **Done**, or **Remove** may fail.
+
+---
+
 ## Commands
 
 ### `/turn start`
